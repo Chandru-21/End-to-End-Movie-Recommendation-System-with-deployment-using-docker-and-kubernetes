@@ -9,17 +9,14 @@ import pandas as pd
 import numpy as np
 import requests
 from bs4 import BeautifulSoup
-from time import sleep
-from random import randint
 
 
-#Declaring the headers 
+
 headers = ({'User-Agent':
             'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36',
            'Accept-Language': 'en-US, en;q=0.5'})
 
-#declaring the list of empty variables, So that we can append the data overall
-#director name
+
 movie_name = []
 year = []
 time=[]
@@ -82,6 +79,6 @@ for page in pages:
         description_ = describe[1].text.replace('\n', '') if len(describe) >1 else 'NA'
         description.append(description_)
         
-#creating a dataframe 
+#dataframe
 movie_list = pd.DataFrame({ "Movie Name": movie_name, "Year of Release" : year, "Watch Time": time,"Genre":genre,"Movie Rating": rating, "Metascore of movie": metascore,"Director":director,"Votes" : votes,"Description": description})
 movie_list.to_excel("movie data_new.xlsx")
