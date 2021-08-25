@@ -6,5 +6,6 @@ This dataset consists of top 1000 movies based on popularity and the range(count
 
 STEP 2:Creating a Content Based Recommendation system(Refer Content based recommendation.py file)
 Content-based filtering uses item features to recommend other items similar to what the user likes, based on their previous actions or explicit feedback.
-https://miro.medium.com/max/1000/1*BME1JjIlBEAI9BV5pOO5Mg.png
+![image](https://user-images.githubusercontent.com/64595758/130803753-2211bcc9-a9f2-4bf8-952f-b9f044130f33.png)
+
 
