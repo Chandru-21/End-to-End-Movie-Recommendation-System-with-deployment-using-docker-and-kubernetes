@@ -11,4 +11,19 @@ Content-based filtering uses item features to recommend other items similar to w
 
 ![image](https://user-images.githubusercontent.com/64595758/130803753-2211bcc9-a9f2-4bf8-952f-b9f044130f33.png)
 
+STEP 3:Creating a frontend for model serving
+
+For this application i have created a front end based on streamlit.
+This application fetches input from the user and provides top 5 similar movies based on the input.This is all done with the help of recommendation system that we have created in the above step.
+
+STEP 4:Model Deployment
+
+Created model has been containerized using docker and its been pushed to container repository.
+The containerized image is then deployed in Kubernetes to manage and scale the application.
+
+![image](https://user-images.githubusercontent.com/64595758/130807050-ab633c7c-5f54-448a-9fc7-aa680756736d.png)
+
+
+
+
 
