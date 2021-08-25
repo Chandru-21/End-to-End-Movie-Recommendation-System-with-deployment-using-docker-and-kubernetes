@@ -13,7 +13,7 @@ Content-based filtering uses item features to recommend other items similar to w
 
 STEP 3:Creating a frontend for model serving
 
-For this application i have created a front end based on streamlit.
+For this application I have created a front end based on streamlit.
 This application fetches input from the user and provides top 5 similar movies based on the input.This is all done with the help of recommendation system that we have created in the above step.
 
 STEP 4:Model Deployment
