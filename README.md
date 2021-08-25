@@ -28,4 +28,9 @@ Application url- http://35.230.8.59/
 
 
 
+P.S-This is a simple model built out of curiosity.There are lot more complex and advanced algorithms that could be implemented to create a recommendation engine.
+
+I hope this a stepping stone for more advanced things.
+
+Happy Learning!
 
