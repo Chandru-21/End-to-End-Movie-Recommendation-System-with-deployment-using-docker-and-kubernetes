@@ -19,7 +19,8 @@ def recommend(movie):
 
 page_bg_img = '''
 <style>
-.stApp {
+
+      .stApp {
   background-image: url("https://payload.cargocollective.com/1/11/367710/13568488/MOVIECLASSICSerikweb_2500_800.jpg");
   background-size: cover;
 }
@@ -29,7 +30,7 @@ page_bg_img = '''
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
 
-st.header('Movie Recommendation System')
+st.markdown('# Movie Recommendation System')
 movies = pickle.load(open('movie_list.pkl','rb'))
 similarity = pickle.load(open('similarity.pkl','rb'))
 
@@ -43,7 +44,6 @@ selected_movie = st.selectbox(
 if st.button('Show Recommendation'):
     recommended_movie_names = recommend(selected_movie)
     for i in recommended_movie_names:
-        st.write(i)
+        st.subheader(i)
         
 
-      
