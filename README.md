@@ -25,6 +25,7 @@ Its then deployed in Kubernetes to manage and increase scalability of the applic
 
 Application url- http://35.230.8.59/
 
+This application frontend is dynamic and changes based on system theme.If you want the same appearance as seen in above image please go to settings in the top right corner of this application and change the theme to dark.
 
 
 
