@@ -2,7 +2,7 @@
 
 STEP 1:Data Scraping
 
-Data was Scraped from IMDB website(using beautiful soup and requests).Refer Web Scraping_new.py script in this repository.
+Data was Scraped from IMDB website(using beautiful soup).Refer Web Scraping_new.py script in this repository.
 This dataset consists of top 1000 movies based on popularity and the range(count) of movies can be modified in the above mentioned python script based on preference.
 
 STEP 2:Creating a Content Based Recommendation system(Refer Content based recommendation.py file)
