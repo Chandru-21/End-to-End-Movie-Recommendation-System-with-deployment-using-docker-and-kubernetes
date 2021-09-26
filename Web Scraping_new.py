@@ -64,11 +64,12 @@ for page in pages:
         dire=store.find('p',class_='').find_all('a')[0].text
         
         director.append(dire)
-        cas=store.find('p',class_='').find_all('a')[1].text
+        cast.append([a.text for a in store.find('p',class_='').find_all('a')[1:]])
+        '''cas=store.find('p',class_='').find_all('a')[1].text
         cas1=store.find('p',class_='').find_all('a')[2].text
         cas2=store.find('p',class_='').find_all('a')[3].text
         cas3=cas+','+cas1+','+cas2
-        cast.append(cas3)
+        cast.append(cas3)'''
         
         
         value = store.find_all('span', attrs = {'name':'nv'}) if store.find_all('span', attrs = {'name':'nv'}) else 'NA'
