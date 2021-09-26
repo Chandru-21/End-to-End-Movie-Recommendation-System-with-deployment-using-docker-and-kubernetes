@@ -28,10 +28,10 @@ gross = []
 description = []
 genre=[]
 cast=[]
-
+cas=[]
 pages = np.arange(1,1000,50)
 #https://www.imdb.com/search/title/?title_type=feature&primary_language=en
-#https://www.imdb.com/search/title/?title_type=feature&primary_language=en&start=51&ref_=adv_nxt
+#https://www.imdb.com/search/title/?title_type=feature&primary_language=en&ref_=adv_prv
 for page in pages:
    
     page = requests.get("https://www.imdb.com/search/title/?title_type=feature&primary_language=en&start="+str(page)+"&ref_=adv_nxt")
@@ -64,14 +64,11 @@ for page in pages:
         dire=store.find('p',class_='').find_all('a')[0].text
         
         director.append(dire)
+        
+        #cas=([a.text for a in store.find('p',class_='').find_all('a')[1:]])
+        #cast=','.join(map(str,cas))
         cast.append([a.text for a in store.find('p',class_='').find_all('a')[1:]])
-        '''cas=store.find('p',class_='').find_all('a')[1].text
-        cas1=store.find('p',class_='').find_all('a')[2].text
-        cas2=store.find('p',class_='').find_all('a')[3].text
-        cas3=cas+','+cas1+','+cas2
-        cast.append(cas3)'''
-        
-        
+      
         value = store.find_all('span', attrs = {'name':'nv'}) if store.find_all('span', attrs = {'name':'nv'}) else 'NA'
         vote = value[0].text if store.find_all('span', attrs = {'name':'nv'}) else 'NA'
 
@@ -87,5 +84,9 @@ for page in pages:
         description.append(description_)
         
 #dataframe
-movie_list = pd.DataFrame({ "Movie Name": movie_name, "Year of Release" : year, "Watch Time": time,"Genre":genre,"Movie Rating": rating, "Metascore of movie": metascore,"Director":director,"Cast":cast,"Votes" : votes,"Description": description})
-movie_list.to_excel("movie data_new.xlsx")
+for i in cast:
+    c=','.join(map(str,i))
+    cas.append(c)
+   
+movie_list = pd.DataFrame({ "Movie Name": movie_name, "Year of Release" : year, "Watch Time": time,"Genre":genre,"Movie Rating": rating, "Metascore of movie": metascore,"Director":director,"Cast":cas,"Votes" : votes,"Description": description})
+movie_list.to_excel("movie data_new1.xlsx")
