@@ -24,7 +24,7 @@ data[columns].isnull().values.any()#no null values
 def get_important_features(data):
     important_features=[]
     for i in range (0,data.shape[0]):
-        important_features.append(data['Title'][i]+' '+data['Director'][i]+' '+data['Genre'][i]+' '+data['Description'][i]+' '+data['Cast'][i])
+        important_features.append(data['Title'][i]+' '+data['Director'][i]+' '+data['Genre'][i]+' '+data['Description'][i])
     return important_features
 
 
